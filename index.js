@@ -1,12 +1,16 @@
-let numberLabel = document.getElementById('count-el')
+let numberText = document.getElementById('count-el')
+let saveText = document.getElementById('save-el')
 
 let count = 0
 
 function increment() {
     count += 1
-    numberLabel.textContent = count
+    numberText.textContent = count
 }
 
 function save() {
-    console.log(count)
+    let saveMessage = count + ' - '
+    saveText.textContent += saveMessage
+    count = 0
+    numberText.textContent = count
 }
